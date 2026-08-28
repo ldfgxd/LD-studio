@@ -447,13 +447,26 @@ body {
 }
 /* --- MODO VIDEOJUEGO / GAMING --- */
 body.page-ld-custom {
+    position: relative;
+    background-color: #0b0b16; /* Un color base por si tarda en cargar */
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* Creamos una capa fija para el fondo que no se rompe en móviles */
+body.page-ld-custom::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     background-image: url('img/fondo-gaming.jpg') !important;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
-    background-attachment: fixed !important;
+    z-index: -1; /* Lo manda totalmente al fondo para que las tarjetas pasen encima */
 }
-
 /* Tarjetas con estilo de panel de juego / interfaz HUD */
 body.page-ld-custom .navbar,
 body.page-ld-custom .card {
