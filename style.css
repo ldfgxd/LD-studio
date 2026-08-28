@@ -448,15 +448,14 @@ body {
 /* --- MODO VIDEOJUEGO / GAMING --- */
 body.page-ld-custom {
     position: relative;
-    background-color: #0b0b16; /* Un color base por si tarda en cargar */
+    background-color: #0b0b16;
     margin: 0;
     min-height: 100vh;
 }
 
-/* Creamos una capa fija para el fondo que no se rompe en móviles */
 body.page-ld-custom::before {
     content: "";
-    position: fixed;
+    position: fixed !important;
     top: 0;
     left: 0;
     width: 100vw;
@@ -465,7 +464,8 @@ body.page-ld-custom::before {
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
-    z-index: -1; /* Lo manda totalmente al fondo para que las tarjetas pasen encima */
+    z-index: -999 !important;
+    pointer-events: none;
 }
 /* Tarjetas con estilo de panel de juego / interfaz HUD */
 body.page-ld-custom .navbar,
