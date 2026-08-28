@@ -1678,3 +1678,20 @@ body.page-ld-custom h2 {
     color: #00ffff;
     text-decoration: underline;
 }
+@keyframes parpadear-flecha {
+    0%, 100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    50% {
+        opacity: 0.3;
+        transform: translateX(4px); /* Se mueve hacia la derecha apuntando al texto */
+    }
+}
+
+.flecha-parpadeante {
+    display: inline-block;
+    margin-right: 6px;
+    font-size: 1.1rem;
+    animation: parpadear-flecha 1s infinite ease-in-out;
+}
