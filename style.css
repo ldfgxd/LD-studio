@@ -1695,3 +1695,19 @@ body.page-ld-custom h2 {
     font-size: 1.1rem;
     animation: parpadear-flecha 1s infinite ease-in-out;
 }
+@keyframes parpadear-emoji {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.3;
+        transform: scale(0.9);
+    }
+}
+
+.emoji-musica-parpadeante {
+    display: inline-block;
+    margin-right: 5px;
+    animation: parpadear-emoji 1s infinite ease-in-out;
+}
